@@ -1,2 +1,26 @@
 <!--pages/cate/cate.wxml-->
-<text>pages/cate/cate.wxml</text>
+<HeadSearch></HeadSearch>
+
+<view class="left">
+<view wx:for="{{categories}}" wx:key="cat_id" class="list">
+{{item.cat_name}}
+</view>
+</view>
+
+<view class="right">
+
+<view wx:for="{{cateRightList}}" wx:key="cat_id">
+
+<view class="tilte">/{{item.cat_name}}/</view>
+
+<view class="box">
+<view wx:for="{{item.children}}" wx:key="cat_id" class="img">
+<image src="{{item.cat_icon}}" mode="widthFix"></image>
+<view>{{item.cat_name}}</view>
+</view>
+</view>
+
+
+</view>
+
+</view>

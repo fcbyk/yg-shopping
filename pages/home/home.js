@@ -9,7 +9,9 @@ Page({
    */
   data: {
     bannerList:[],
-    navList:[]
+    navList:[],
+    floorList:[],
+    
   },
 
   getBannerList(){
@@ -32,6 +34,17 @@ Page({
     })
   },
 
+  getFloorList(){
+    res.request({
+      url:"/home/floordata"
+    }).then( result => {
+      this.setData({
+        floorList:result.data.message
+      })
+    })
+  },
+
+
 
   /**
    * 生命周期函数--监听页面加载
@@ -39,6 +52,7 @@ Page({
   onLoad(options) {
     this.getBannerList()
     this.getNavList()
+    this.getFloorList()
   },
 
   /**

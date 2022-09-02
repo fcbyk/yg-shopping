@@ -13,4 +13,15 @@
   </view>
 </view>
 
+<view class="floor">
+<!-- 标题 -->
+<view wx:for="{{floorList}}" wx:key="index" class="clearfix">
+<image src="{{item.floor_title.image_src}}" mode="widthFix" class="title"></image>
+<view wx:for="{{item.product_list}}" wx:key="index" class="floorimg">
+  <image src="{{item.image_src}}" mode="{{index==0?'widthFix':'scaleToFill'}}"></image>
+</view>
+</view>
+
+</view>
+
 </view>

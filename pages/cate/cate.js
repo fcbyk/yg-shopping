@@ -1,18 +1,31 @@
 // pages/cate/cate.js
+const res = require("../../request/index")
 Page({
 
   /**
    * 页面的初始数据
    */
   data: {
-
+    categories:[],
+    cateRightList:[]
   },
 
+  getCategories(){
+    res.request({
+      url:"/categories"
+    }).then( result => {
+      this.setData({
+        categories:result.data.message,
+        cateRightList:result.data.message[0].children
+      })
+      // console.log(result.data.message)
+    })
+  },
   /**
    * 生命周期函数--监听页面加载
    */
   onLoad(options) {
-
+    this.getCategories()
   },
 
   /**
