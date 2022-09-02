@@ -1,36 +1,12 @@
 {
   "pages":[
-    "pages/one/one",
-    "pages/two/two",
-    "pages/three/three"
+    "pages/one/one"
   ],
   "window":{
     "backgroundTextStyle":"light",
     "navigationBarBackgroundColor": "#fff",
-    "navigationBarTitleText": "",
+    "navigationBarTitleText": "test",
     "navigationBarTextStyle":"black"
-  },
-  "tabBar": {
-    "list": [
-      {
-      "pagePath": "pages/one/one",
-      "text": "男",
-      "iconPath": "./image/6.png",
-      "selectedIconPath": "./image/5.png"
-      },
-      {
-        "pagePath": "pages/two/two",
-        "text": "女",
-        "iconPath": "./image/4.png",
-        "selectedIconPath": "./image/3.png"
-      },
-      {
-        "pagePath": "pages/three/three",
-        "text": "未知",
-        "iconPath": "./image/2.png",
-        "selectedIconPath": "./image/1.png"
-      }
-  ]
   },
   "style": "v2",
   "sitemapLocation": "sitemap.json"

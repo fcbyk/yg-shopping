@@ -1,6 +1,7 @@
 {
   "usingComponents": {},
-  "navigationBarBackgroundColor": "#3498db",
-  "navigationBarTitleText": "男",
-  "navigationBarTextStyle": "white"
+  "backgroundTextStyle":"light",
+  "navigationBarBackgroundColor": "#1e90ff",
+  "navigationBarTitleText": "",
+  "navigationBarTextStyle":"white"
 }
