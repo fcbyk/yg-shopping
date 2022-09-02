@@ -1,0 +1,4 @@
+<!--component/headSearch/headSearch.wxml-->
+<view class="search">
+    <view class="btn">搜索</view>
+</view>

@@ -1,0 +1,8 @@
+{
+  "usingComponents": {
+    "HeadSearch":"/component/headSearch/headSearch"
+  },
+  "navigationBarTitleText": "无忧首页",
+  "navigationBarBackgroundColor": "#eb4450",
+  "navigationBarTextStyle": "white"
+}

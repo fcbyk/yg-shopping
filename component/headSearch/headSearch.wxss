@@ -1,0 +1,13 @@
+/* component/headSearch/headSearch.wxss */
+.search {
+  background-color: #eb4450;
+  padding: 10rpx;
+}
+.btn {
+  background-color: #fff;
+  line-height: 70rpx;
+  border-radius: 16rpx;
+  text-align: center;
+  color: #a3a2a7;
+  font-size: 30rpx;
+}

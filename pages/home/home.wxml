@@ -1,0 +1,16 @@
+<!--pages/home/home.wxml-->
+<view>
+  <HeadSearch></HeadSearch>
+  <swiper indicator-dots indicator-active-color="#57fb62" autoplay circular interval="2000" class="itemimg">
+    <swiper-item wx:for="{{bannerList}}" wx:key="goods_id">
+        <image src="{{item.image_src}}" mode="widthFix" ></image>
+    </swiper-item>
+</swiper>
+
+<view class="nav">
+  <view wx:for="{{navList}}" wx:key="name" > 
+    <image src="{{item.image_src}}" mode="widthFix"></image>
+  </view>
+</view>
+
+</view>

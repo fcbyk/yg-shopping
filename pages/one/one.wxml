@@ -1,8 +1,0 @@
-<!--pages/one/one.wxml-->
-<view class="box" wx:for="{{phone}}" wx:key="{{index}}">
-  <view><image src="{{item.img}}" ></image></view>
-  <view>{{item.name}}</view>
-  <view>骁龙8 一亿像素</view>
-  <view>{{item.price}}<text>起</text></view>
-  <button>立即购买</button>
-</view>

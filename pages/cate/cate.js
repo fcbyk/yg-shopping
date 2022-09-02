@@ -1,32 +1,11 @@
-// pages/one/one.js
+// pages/cate/cate.js
 Page({
 
   /**
    * 页面的初始数据
    */
   data: {
-      phone:[
-        {
-          img:"../../image/1.jpg",
-          name:"手机1",
-          price:"￥998"
-        },
-        {
-          img:"../../image/2.jpg",
-          name:"手机2",
-          price:"￥1998"
-        },
-        {
-          img:"../../image/3.jpg",
-          name:"手机3",
-          price:"￥2998"
-        },
-        {
-          img:"../../image/4.jpg",
-          name:"手机4",
-          price:"￥3998"
-        }
-      ]
+
   },
 
   /**
