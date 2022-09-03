@@ -5,7 +5,68 @@ Page({
    * 页面的初始数据
    */
   data: {
-
+    oneList:[
+      {
+        id:1,
+        num:0,
+        name:"收藏的店铺"
+      },
+      {
+        id:2,
+        num:0,
+        name:"收藏的商品"
+      },
+      {
+        id:3,
+        num:0,
+        name:"关注的商品"
+      },
+      {
+        id:4,
+        num:0,
+        name:"我的足迹"
+      }
+    ],
+    twoList:[
+      {
+        id:1,
+        img_src: "../../image/全部订单.svg",
+        name:"全部订单"
+      },
+      {
+        id:2,
+        img_src:"../../image/待付款.svg",
+        name:"待付款"
+      },
+      {
+        id:3,
+        img_src:"../../image/待收货.svg",
+        name:"待收货"
+      },
+      {
+        id:4,
+        img_src:"../../image/退款.svg",
+        name:"退货/退款"
+      }
+    ],
+    threeList:[
+      {
+        id:1,
+        name:'联系客服'
+      },
+      {
+        id:2,
+        name:'意见反馈'
+      },
+      {
+        id:3,
+        name:'关于我们'
+      },
+      {
+        id:4,
+        name:'设置'
+      },
+    ]
   },
 
   /**

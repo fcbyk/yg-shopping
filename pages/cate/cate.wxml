@@ -2,14 +2,22 @@
 <HeadSearch></HeadSearch>
 
 <view class="left">
-<view wx:for="{{categories}}" wx:key="cat_id" class="list">
+<scroll-view scroll-y scroll-top="{{leftTop}}"
+scroll-with-animation
+>
+<view wx:for="{{categories}}" wx:key="cat_id" class="list {{leftIndex==index?'active':''}}"
+bindtap="toggleLeft"
+data-index="{{index}}"
+>
 {{item.cat_name}}
 </view>
+</scroll-view>
 </view>
 
 <view class="right">
-
-<view wx:for="{{cateRightList}}" wx:key="cat_id">
+<scroll-view scroll-y scroll-top="{{rightTop}}"
+scroll-with-animation>
+  <view wx:for="{{cateRightList}}" wx:key="cat_id">
 
 <view class="tilte">/{{item.cat_name}}/</view>
 
@@ -22,5 +30,7 @@
 
 
 </view>
+</scroll-view>
+
 
 </view>

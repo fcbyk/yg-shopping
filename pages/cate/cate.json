@@ -2,7 +2,7 @@
   "usingComponents": {
     "HeadSearch":"/component/headSearch/headSearch"
   },
-  "navigationBarTitleText": "分类",
+  "navigationBarTitleText": "商品分类",
   "navigationBarBackgroundColor": "#eb4450",
   "navigationBarTextStyle": "white"
 }

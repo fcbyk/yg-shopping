@@ -1,12 +1,17 @@
 /* pages/cate/cate.wxss */
 .left,.right{
   /* background-color: aqua; */
-  height: calc(100vh - 90rpx);
+  /* height: calc(100vh - 90rpx); */
   float: left;
   /* border: solid 1rpx black; */
   box-sizing: border-box;
-  overflow: auto;
+  /* overflow: auto; */
 }
+
+scroll-view{
+  height: calc(100vh - 110rpx);
+}
+
 .left{
   width: 30vw;
 }
@@ -33,6 +38,7 @@
   text-align: center;
   margin: 15rpx 0;
 }
+
 .tilte:nth-child(1){
   margin-bottom: 0rpx;
 }
@@ -50,4 +56,8 @@
   text-align: center;
   padding: 15rpx;
   font-size: 30rpx;
+}
+
+.active{
+  color: #eb4450;
 }

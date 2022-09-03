@@ -7,25 +7,39 @@ Page({
    */
   data: {
     categories:[],
-    cateRightList:[]
+    cateRightList:[],
+    leftIndex:0,
+    leftTop:0,
+    rightTop:0
   },
 
-  getCategories(){
+  getCategories(num){
     res.request({
       url:"/categories"
     }).then( result => {
       this.setData({
         categories:result.data.message,
-        cateRightList:result.data.message[0].children
+        cateRightList:result.data.message[num].children
       })
       // console.log(result.data.message)
     })
+  },
+
+  toggleLeft(e){
+    const index= e.currentTarget.dataset.index
+    console.log(index)
+    this.setData({
+      leftIndex:index,
+      leftTop: (index - 5)*60,
+      rightTop:0
+    })
+    this.getCategories(index)
   },
   /**
    * 生命周期函数--监听页面加载
    */
   onLoad(options) {
-    this.getCategories()
+    this.getCategories(0)
   },
 
   /**

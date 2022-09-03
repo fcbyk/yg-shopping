@@ -1,2 +1,23 @@
 <!--pages/shoppingCar/shoppingCar.wxml-->
-<text>pages/shoppingCar/shoppingCar.wxml</text>
+
+<view class="top"> +添加收货地址 </view>
+
+<view class="main">
+<view><image src="../../image/9.jpeg" mode="widthFix"></image></view>
+<view>购物车竟然是空的</view>
+<view>再忙，也要记得买点什么犒赏自己~</view>
+<view>
+<navigator url="../cate/cate" open-type="switchTab">去逛逛</navigator>
+</view>
+</view>
+
+<view class="bot">
+<checkbox class="fL"></checkbox>
+<view class="fL">全选</view>
+<view class="fR">结算(0)</view>
+<view class="fR">
+<view>合计￥0</view>
+<view>包含运费</view>
+</view>
+
+</view>

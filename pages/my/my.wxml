@@ -1,2 +1,37 @@
 <!--pages/my/my.wxml-->
-<text>pages/my/my.wxml</text>
+<view class="head">
+  <view>立即登录</view>
+</view>
+
+<view class="content">
+
+  <view class="c-one">
+    <view class="c-one-list" wx:for="{{oneList}}" wx:key="{{id}}">
+      <view>{{item.num}}</view>
+      <view>{{item.name}}</view>
+    </view>
+  </view>
+
+  <view class="c-two">
+    <view>我的订单</view>
+    <view class="c-two-box">
+      <view class="c-one-list" wx:for="{{twoList}}" wx:key="{{id}}">
+        <view><image src="{{item.img_src}}" mode="widthFix" class="icon"></image></view>
+        <view>{{item.name}}</view>
+      </view>
+    </view>
+  </view>
+
+  <view class="c-three">收货地址管理</view>
+
+  <view class="c-four">
+    <view class="c-four-list" wx:for="{{threeList}}" wx:key="id">
+      {{item.name}}
+    </view>
+  </view>
+
+
+</view>
+
+
+

@@ -1,1 +1,84 @@
 /* pages/shoppingCar/shoppingCar.wxss */
+
+.top{
+  height: 100rpx;
+  text-align: center;
+  border-bottom: 4rpx solid #eb4450;
+  line-height: 100rpx; 
+  font-size: 33rpx;
+  color: #eb4450;
+}
+
+.main view:nth-child(1)>image{
+  width: 70%;
+  /* outline: solid rebeccapurple 3rpx; */
+  /* height: 100px; */
+  position: relative;
+  left: 15%;
+  /* top: 100rpx; */
+  margin-top: 150rpx;
+}
+
+.main{
+  text-align: center;
+}
+
+.main view:nth-child(2){
+  font-size: 35rpx;
+  margin: 5rpx 0;
+}
+
+.main view:nth-child(3){
+  font-size: 30rpx;
+  margin: 10rpx 0;
+  color: #2d3436;
+}
+
+navigator{
+  font-size: 30rpx;
+  margin: 30rpx 0;
+  color: aliceblue;
+  background-color: #eb4450;
+  width: 30%;
+  position: relative;
+  left: 35%;
+  padding: 15rpx;
+  box-sizing: border-box;
+  border-radius: 15rpx;
+}
+
+.bot{
+  height: 100rpx;
+  text-align: center;
+  border-top: 2rpx solid rgb(182, 182, 182,0.5);
+  line-height: 100rpx; 
+  font-size: 33rpx;
+  color: #eb4450;
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+}
+
+.bot>view:nth-child(3){
+  height: 100rpx;
+  background-color: #eb4450;
+  width: 200rpx;
+  text-align: center;
+  color: aliceblue;
+  z-index: 2;
+}
+.bot>view:nth-child(4){
+  font-size: 30rpx;
+  line-height: initial;
+  padding-top: 15rpx;
+  padding-right: 15rpx;
+  color: #2d3436;
+}
+.bot :nth-child(1){
+  margin-left: 10rpx;
+}
+
+.bot :nth-child(2){
+  margin-left: 10rpx;
+  color: #2d3436;
+}

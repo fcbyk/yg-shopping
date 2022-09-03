@@ -1,1 +1,77 @@
 /* pages/my/my.wxss */
+page{
+  background-color: #ecf0f1;
+}
+.head{
+  background-color: #eb4450;
+  height: 400rpx;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.head :nth-child(1){
+  background-color: aliceblue;
+  height: 200rpx;
+  width: 200rpx;
+  border-radius: 50%;
+  line-height: 200rpx;
+  text-align: center;
+}
+
+.icon{
+  width: 70rpx;
+  padding: 10rpx;
+  position: relative;
+  left: 10rpx;
+}
+
+.content{
+  /* background-color: aquamarine; */
+  position: relative;
+  top: -20rpx;
+  width: 90%;
+  left: 5%;
+  /* outline: aquamarine solid 3rpx; */
+  background-color: #ecf0f1;
+  border-radius: 10rpx;
+}
+
+.c-one-list :nth-child(1){
+  margin-bottom: 5rpx;
+}
+
+.c-one,.c-two-box{
+  display: flex;
+  justify-content: space-between;
+  text-align: center;
+  padding: 20rpx 10rpx;
+  font-size: 30rpx;
+}
+.c-two>view:nth-child(1){
+  border-bottom: 1rpx rgb(78, 78, 78,0.1) solid;
+  padding: 13rpx 15rpx;
+}
+.c-one{
+  background-color: white;
+  border-radius: 10rpx;
+  box-shadow: 0rpx 0rpx 10rpx rgb(78, 78, 78,0.1);
+}
+.c-two,.c-three,.c-four{
+  background-color: white;
+  margin-top: 30rpx;
+  border-radius: 10rpx;
+  box-shadow: 0rpx 0rpx 10rpx rgb(78, 78, 78,0.1);
+}
+
+.c-one-list{
+  margin: 0 10rpx;
+}
+
+.c-three,.c-four-list{
+  padding: 20rpx;
+}
+
+.c-four :not(:nth-child(1)){
+  border-top: 1rpx rgb(78, 78, 78,0.1) solid;
+}
