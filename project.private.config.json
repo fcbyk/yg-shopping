@@ -4,5 +4,25 @@
   "setting": {
     "compileHotReLoad": true,
     "urlCheck": false
+  },
+  "condition": {
+    "miniprogram": {
+      "list": [
+        {
+          "name": "商品列表",
+          "pathName": "pages/proList/proList",
+          "query": "cid=5",
+          "launchMode": "default",
+          "scene": null
+        },
+        {
+          "name": "商品列表",
+          "pathName": "pages/proList/proList",
+          "query": "cid=5",
+          "launchMode": "default",
+          "scene": null
+        }
+      ]
+    }
   }
 }

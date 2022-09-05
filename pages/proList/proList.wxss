@@ -1,0 +1,17 @@
+/* pages/proList/proList.wxss */
+.tab{
+  display: flex;
+}
+
+.tabList{
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  padding: 10rpx 0;
+  font-size: 30rpx;
+}
+
+.tabList.active{
+  border-bottom: 6rpx solid #eb4450;
+  color: #eb4450;
+}

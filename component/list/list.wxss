@@ -1,0 +1,35 @@
+/* component/list/list.wxss */
+
+.list-img{
+  width: 240rpx;
+  height: 240rpx;
+  display: block;
+}
+
+.list-item {
+  display: flex;
+  border-bottom: 2rpx solid #ccc;
+}
+
+.list-left {
+  width: 240rpx;
+  padding: 20rpx;
+}
+
+.list-right{
+  flex:1;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  font-size: 30rpx;
+}
+.list-right-name {
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+.list-right-price{
+  color: #eb4450;
+}

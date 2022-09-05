@@ -1,0 +1,14 @@
+<!--component/list/list.wxml-->
+<view class="list">
+
+  <view class="list-item" wx:for="{{arr}}" wx:key="this">
+    <view class="list-left">
+        <image src="{{item.goods_small_logo?item.goods_small_logo:'https://gimg2.baidu.com/image_search/src=http%3A%2F%2Fwww.ibreh.com%2Fupload%2F20180530%2Fe676f667c4cdfc7e074898adab2622f2.jpg&refer=http%3A%2F%2Fwww.ibreh.com&app=2002&size=f9999,10000&q=a80&n=0&g=0n&fmt=auto?sec=1664977426&t=cd9b3c9da6b6ff1445db9589276fb475'}}" mode="widthFix" class="list-img"></image>
+    </view>
+    <view class="list-right">
+        <view class="list-right-name">{{item.goods_name}}</view>
+        <view class="list-right-price">{{item.goods_price}}</view>
+    </view>
+  </view>
+
+</view>

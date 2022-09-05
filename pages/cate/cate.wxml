@@ -23,7 +23,9 @@ scroll-with-animation>
 
 <view class="box">
 <view wx:for="{{item.children}}" wx:key="cat_id" class="img">
-<image src="{{item.cat_icon}}" mode="widthFix"></image>
+<navigator url="../proList/proList?cid={{item.cat_id}}" open-type="navigate">
+  <image src="{{item.cat_icon}}" mode="widthFix"></image>
+</navigator>
 <view>{{item.cat_name}}</view>
 </view>
 </view>

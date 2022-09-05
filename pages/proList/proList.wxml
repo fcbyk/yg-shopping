@@ -1,0 +1,33 @@
+<!--pages/proList/proList.wxml-->
+
+
+<view class="proList">
+<!-- 头部开始 -->
+<HeadSearch></HeadSearch>
+<!-- 头部结束 -->
+
+<!-- tab开始 -->
+<view class="tab">
+  <view 
+  class="tabList {{tabIndex==index?'active':''}}" 
+  wx:for="{{tabList}}" 
+  wx:key="id"
+  bindtap="toggleTab"
+  data-index="{{index}}"
+  >
+  {{item.name}}
+  </view>
+</view>
+<!-- tab结束 -->
+
+<!-- 内容区开始 -->
+<block wx:if="{{tabIndex==0}}">
+<List arr="{{goodsList}}"></List>
+</block>
+
+<block wx:else>
+<List arr="{{goodsRightList}}"></List>
+</block>
+<!-- 内容区结束 -->
+
+</view>

@@ -1,0 +1,7 @@
+{
+  "usingComponents": {
+    "HeadSearch":"/component/headSearch/headSearch",
+    "List":"/component/list/list"
+  },
+"navigationBarTitleText": "商品列表"
+}
