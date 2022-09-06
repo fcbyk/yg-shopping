@@ -1,0 +1,97 @@
+/* pages/detail/detail.wxss */
+swiper{
+  height: 480rpx;
+}
+.s-img{
+  height: 450rpx;
+}
+.swiper-img{
+  width: 60%;
+  margin: 0 auto;
+}
+
+.info{
+  border-top: 2rpx solid #999;
+  border-bottom: 2rpx solid #999;
+  padding: 10rpx 0;
+  font-size: 30rpx;
+  display: flex;
+}
+.info-left{
+  flex: 5;
+  padding: 0 10rpx;
+  border-right: 2rpx solid #999;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+.info-right{
+  flex: 1;
+}
+.info-right-icon{
+  width: 40%;
+  margin: 0 auto;
+}
+.i-r-img{
+  height: 48rpx;
+}
+.info-right-txt{
+  text-align: center;
+}
+
+.redContent{
+  color: #eb4450;
+  font-size: 30rpx;
+  font-weight: bold;
+  padding: 20rpx 10rpx;
+}
+
+.footer{
+  width: 100%;
+  height: 90rpx;
+  background-color: #fff;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  display: flex;
+}
+.foot-list{
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.foot-list-img{
+  width: 35%;
+  margin: 0 auto;
+}
+.foot-list-txt{
+  font-size: 28rpx;
+  text-align: center;
+}
+.foot-btn{
+  flex: 2;
+  font-size: 30rpx;
+  font-weight: bold;
+  text-align: center;
+  line-height: 90rpx;
+  background-color: #eb4450;
+  color: #fff;
+}
+.foot-btn.shop{
+  background-color: #ffa500;
+}
+.f-list-img{
+  height: 36rpx;
+}
+
+#button{
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+}
+.foot-list{
+  position: relative;
+}

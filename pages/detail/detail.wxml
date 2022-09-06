@@ -1,0 +1,57 @@
+<!--pages/detail/detail.wxml-->
+<view class="detail">
+  <swiper indicator-active-color="#eb4450" indicator-dots autoplay circular>
+    <swiper-item wx:for="{{detailList.pics}}" wx:key="pics_big">
+      <view class="swiper-img">
+        <image src="{{item.pics_mid_url}}" mode="widthFix" class="s-img" bindtap="preImg" data-index="{{index}}"></image>
+      </view>
+    </swiper-item>
+  </swiper>
+
+  <view class="redContent">￥{{detailList.goods_price}}</view>
+
+  <view class="info">
+    <view class="info-left">
+      {{detailList.goods_name}}
+    </view>
+    <view class="info-right">
+    <view class="info-right-icon" bindtap="love">
+      <image src="../../image/收藏.svg" mode="widthFix" class="i-r-img" wx:if="{{!isLove}}"></image>
+      <image src="../../image/收藏 (2).svg" mode="widthFix" class="i-r-img" wx:else=""></image>
+    </view>
+    <view class="info-right-txt">收藏</view>
+  </view>
+  </view>
+
+  <view class="redContent">图文详细</view>
+
+  <rich-text nodes="{{detailList.goods_introduce}}"></rich-text>
+
+  <view class="footer">
+    <view class="foot-list">
+      <view class="foot-list-img">
+        <image src="../../image/客服.svg" mode="widthFix" class="f-list-img"></image>
+      </view>
+      <view class="foot-list-txt">客服</view>
+      <button open-type="contact" id="button"></button>
+    </view>
+    <view class="foot-list">
+      <view class="foot-list-img">
+        <image src="../../image/分享.svg" mode="widthFix" class="f-list-img"></image>
+      </view>
+      <view class="foot-list-txt">分享</view>
+      <button open-type="share" id="button"></button>
+    </view>
+    <view class="foot-list">
+      <view class="foot-list-img">
+      <navigator url="../shoppingCar/shoppingCar" open-type="switchTab">
+        <image src="../../image/购物车.svg" mode="widthFix" class="f-list-img"></image>
+      </navigator>
+      </view>
+      <view class="foot-list-txt">购物车</view>
+    </view>
+    <view class="foot-btn shop">加入购物车</view>
+    <view class="foot-btn">立即购买</view>
+  </view>
+
+</view>

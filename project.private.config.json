@@ -21,8 +21,23 @@
           "query": "cid=5",
           "launchMode": "default",
           "scene": null
+        },
+        {
+          "name": "商品详情",
+          "pathName": "pages/detail/detail",
+          "query": "gid=43986",
+          "launchMode": "default",
+          "scene": null
+        },
+        {
+          "name": "商品详情",
+          "pathName": "pages/detail/detail",
+          "query": "gid=43986",
+          "launchMode": "default",
+          "scene": null
         }
       ]
     }
-  }
+  },
+  "libVersion": "2.26.0"
 }
