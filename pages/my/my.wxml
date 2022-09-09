@@ -1,6 +1,11 @@
 <!--pages/my/my.wxml-->
 <view class="head">
-  <view>立即登录</view>
+  <view wx:if="{{!isLogin}}">
+    <button class="goBtn" open-type="getUserInfo" bindgetuserinfo="goLogin">立即登录</button>
+  </view>
+  <view wx:else>
+    <image src="{{userInfo.avatarUrl}}" mode="widthFix" class="user-img"></image>
+  </view>
 </view>
 
 <view class="content">

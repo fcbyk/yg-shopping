@@ -5,7 +5,10 @@ Page({
     isAddress:false,
     addressInfo:{},
     isCar:false,
-    carList:[]
+    carList:[],
+    allChecked:false,
+    allPrice:0,
+    allNum:0
   },
   onLoad(){
     this.getAddressInfo()
@@ -38,9 +41,79 @@ Page({
   },
   showCar(){
     var carList = wx.getStorageSync('carList')
+    var isActive= carList.every(v=>{return v.isActive})
     this.setData({
       carList,
-      isCar:true
+      isCar:true,
+      allChecked:isActive
     })
+    this.calc()
+    if (carList.length==0) {
+      this.setData({
+        isCar:false,
+        allChecked:false
+      })
+    }
+  },
+  allChecked(){
+    this.setData({
+      allChecked:!this.data.allChecked
+    })
+    var car=wx.getStorageSync('carList')
+    car.forEach(v=>{
+      return v.isActive=this.data.allChecked
+    })
+    wx.setStorageSync('carList', car)
+    this.showCar()
+  },
+  listChange(e){
+    var index=e.currentTarget.dataset.index
+    var car=wx.getStorageSync('carList')
+    car[index].isActive=!car[index].isActive
+    wx.setStorageSync('carList', car)
+    this.showCar()
+  },
+  calc(){
+    var car = wx.getStorageSync('carList')
+    var allPrice=0
+    var allNum=0
+    car.forEach(v=>{
+      if(v.isActive){
+        allNum+=v.num,
+        allPrice+=v.num*v.price
+      }
+    })
+    this.setData({
+      allPrice,
+      allNum
+    })
+  },
+  changeNum(e){
+    var index = e.currentTarget.dataset.index;
+    var num =Number(e.currentTarget.dataset.num)
+    var car = wx.getStorageSync('carList')
+    var number = car[index].num +num
+    if(number == 0){
+      wx.showModal({
+        title:'提示',
+        content:'真的忍心删除我吗',
+        success:(res)=>{
+          if (res.confirm){
+            car.splice(index,1)
+            wx.setStorageSync('carList', car)
+            this.showCar()
+          }else if (res.cancel) {
+            wx.showToast({
+              title: '就知道你舍不得我',
+              icon:'none'
+            }) 
+          }
+        }
+      })
+    }else{
+      car[index].num =number
+      wx.setStorageSync('carList', car)
+      this.showCar()
+    }
   }
 })

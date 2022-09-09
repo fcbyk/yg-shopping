@@ -3,13 +3,23 @@
   <HeadSearch></HeadSearch>
   <swiper indicator-dots indicator-active-color="#57fb62" autoplay circular interval="2000" class="itemimg">
     <swiper-item wx:for="{{bannerList}}" wx:key="goods_id">
-        <image src="{{item.image_src}}" mode="widthFix" ></image>
+    <navigator url="../detail/detail?gid={{item.goods_id}}" open-type="navigate">
+      <image src="{{item.image_src}}" mode="widthFix" ></image>
+    </navigator> 
     </swiper-item>
 </swiper>
 
 <view class="nav">
   <view wx:for="{{navList}}" wx:key="name" > 
-    <image src="{{item.image_src}}" mode="widthFix"></image>
+    <block wx:if="{{index==0}}">
+      <!-- <navigator open-type="navigate" url="../cate/cate"> -->
+        <image src="{{item.image_src}}" mode="widthFix"></image>
+      <!-- </navigator> -->
+    </block>
+    <block wx:else>
+      <image src="{{item.image_src}}" mode="widthFix"></image>
+    </block>
+    
   </view>
 </view>
 
@@ -18,7 +28,7 @@
 <view wx:for="{{floorList}}" wx:key="index" class="clearfix">
 <image src="{{item.floor_title.image_src}}" mode="widthFix" class="title"></image>
 <view wx:for="{{item.product_list}}" wx:key="index" class="floorimg">
-  <image src="{{item.image_src}}" mode="{{index==0?'widthFix':'scaleToFill'}}"></image>
+  <image src="{{item.image_src}}" mode="{{index==0?'widthFix':'scaleToFill'}}" bindtap="goDetail" data-url="{{item.navigator_url}}"></image>
 </view>
 </view>
 

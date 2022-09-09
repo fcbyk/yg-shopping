@@ -21,8 +21,8 @@
 </view>
 <view class="block" wx:else>
   <view class="block-list" wx:for="{{carList}}" wx:key="gid">
-    <checkbox-group>
-      <checkbox class="aaa"></checkbox>
+    <checkbox-group bindchange="listChange" data-index="{{index}}">
+      <checkbox checked="{{item.isActive}}" class="aaa"></checkbox>
     </checkbox-group>
     <view class="block-info">
       <view class="info-img">
@@ -33,9 +33,9 @@
         <view class="pr-number">
           <view class="pr-price">￥{{item.price}}</view>
           <view class="pr-num">
-            <text>-</text>
+            <text bindtap="changeNum" data-num="-1" data-index="{{index}}">-</text>
             <text>{{item.num}}</text>
-            <text>+</text>
+            <text bindtap="changeNum" data-num="1" data-index="{{index}}">+</text>
           </view>
         </view>
       </view>
@@ -44,11 +44,13 @@
 </view>
 
 <view class="bot">
-<checkbox class="fL"></checkbox>
+<checkbox-group bindchange="allChecked">
+  <checkbox class="fL" checked="{{allChecked}}"></checkbox>
+</checkbox-group>
 <view class="fL">全选</view>
-<view class="fR">结算(0)</view>
+<view class="fR">结算{{allNum}}</view>
 <view class="fR">
-<view>合计￥0</view>
+<view>合计￥{{allPrice}}</view>
 <view>包含运费</view>
 </view>
 

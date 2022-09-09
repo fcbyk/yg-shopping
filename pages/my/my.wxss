@@ -75,3 +75,11 @@ page{
 .c-four :not(:nth-child(1)){
   border-top: 1rpx rgb(78, 78, 78,0.1) solid;
 }
+
+.goBtn{
+  font-size: 30rpx;
+  line-height: 60rpx;
+  padding: 0;
+  border: none;
+  width: 300rpx;
+}

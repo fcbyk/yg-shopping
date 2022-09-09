@@ -95,7 +95,8 @@ Page({
       img:detailList.goods_small_logo,
       price:detailList.goods_price,
       name:detailList.goods_name,
-      gid:detailList.goods_id
+      gid:detailList.goods_id,
+      isActive:true
     }
     var car = wx.getStorageSync('carList')
     if(car){

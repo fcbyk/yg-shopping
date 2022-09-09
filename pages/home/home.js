@@ -44,6 +44,14 @@ Page({
     })
   },
 
+  goDetail(e){
+    var url = e.currentTarget.dataset.url
+    var query = url.split("?")[1].split("=")[1]
+    wx.navigateTo({
+      url: '../proList/proList?query='+query,
+    })
+  },
+
 
 
   /**

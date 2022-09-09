@@ -66,14 +66,36 @@ Page({
         id:4,
         name:'设置'
       },
-    ]
+    ],
+    isLogin:false,
+    userInfo:{}
+  },
+  goLogin(e){
+    wx.showToast({
+      title: '成功登录',
+    })
+    var userInfo={
+      avatarUrl:e.detail.userInfo.avatarUrl,
+      nickName:e.detail.userInfo.nickName
+    }
+    this.setData({
+      userInfo,
+      isLogin:true
+    })
+    wx.setStorageSync('userinfo', userInfo)
   },
 
   /**
    * 生命周期函数--监听页面加载
    */
-  onLoad(options) {
-
+  onLoad() {
+    var userInfo = wx.getStorageSync('userinfo')
+    if(userInfo){
+      this.setData({
+        userInfo,
+        isLogin:true
+      })
+    }
   },
 
   /**
