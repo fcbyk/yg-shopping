@@ -9,7 +9,8 @@ Page({
   data: {
     gid:"",
     detailList:{},
-    isLove:false
+    isLove:false,
+    number:10
   },
 
   /**
@@ -28,6 +29,7 @@ Page({
         isLove
       })
     }
+    this.showCarNum()
   },
 
   getDetailList(){
@@ -81,6 +83,56 @@ Page({
         isLove:false
       })
     }
+  },
+
+  addShop(){
+    wx.showToast({
+      title: '成功加入购物车',
+    })
+    var detailList=this.data.detailList
+    var obj={
+      num:null,
+      img:detailList.goods_small_logo,
+      price:detailList.goods_price,
+      name:detailList.goods_name,
+      gid:detailList.goods_id
+    }
+    var car = wx.getStorageSync('carList')
+    if(car){
+      var isData = false
+      for(var i = 0; i<car.length;i++){
+        if(car[i].gid == this.data.detailList.goods_id){
+          var num = car[i].num+1
+          obj.num = num
+          car.splice(i,1)
+          car.unshift(obj)
+          wx.setStorageSync('carList', car)
+          isData = true
+        }
+      }
+      if(!isData){
+        obj.num = 1
+        car.unshift(obj)
+        wx.setStorageSync('carList', car)
+      }
+    }else{
+      var carList = []
+      obj.num = 1
+      carList.unshift(obj)
+      wx.setStorageSync('carList', carList)
+    }
+    this.showCarNum()
+  },
+
+  showCarNum(){
+    var car = wx.getStorageSync('carList') || []
+    var allNum = 0
+    for(var i = 0; i<car.length;i++){
+      allNum +=car[i].num
+    }
+    this.setData({
+      number:allNum
+    })
   },
 
   /**

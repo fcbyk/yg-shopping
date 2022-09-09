@@ -82,3 +82,75 @@ navigator{
   margin-left: 10rpx;
   color: #2d3436;
 }
+
+.address{
+  font-size: 30rpx;
+  padding: 10rpx 30rpx;
+  color: #2d3436;
+}
+.address-nt{
+  line-height: 45rpx;
+}
+.address-detail{
+  line-height: 45rpx;
+}
+
+.block-list{
+  display: flex;
+}
+.block-info{
+  flex: 1;
+  display: flex;
+}
+.aaa{
+  margin: 20rpx;
+}
+.info-img{
+  width: 180rpx;
+}
+.info-txt{
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  margin-left: 20rpx;
+}
+.info-name{
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  font-size: 30rpx;
+}
+.pr-price{
+  color: #eb4450;
+  font-size: 30rpx;
+  font-weight: bold;
+  line-height: 60rpx;
+}
+.pr-number{
+  display: flex;
+  justify-content: space-between;
+}
+.block-list{
+  align-items: center;
+  border-bottom: 2rpx solid #ccc;
+}
+.i-img{
+  height: 180rpx;
+}
+.pr-num{
+  margin-right: 30rpx;
+}
+.pr-num text{
+  display: inline-block;
+  width: 40rpx;
+  height: 40rpx;
+  border: 2rpx solid #ccc;
+  text-align: center;
+  line-height: 40rpx;
+  font-size: 28rpx;
+}
+.pr-num .itemNum{
+  border-color: #fff;
+}

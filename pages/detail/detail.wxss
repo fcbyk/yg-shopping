@@ -95,3 +95,17 @@ swiper{
 .foot-list{
   position: relative;
 }
+
+.number-icon{
+  width: 40rpx;
+  height: 40rpx;
+  border-radius: 50%;
+  text-align: center;
+  line-height: 40rpx;
+  color: #fff;
+  background-color: #eb4450;
+  position: absolute;
+  top: 0;
+  right: 0;
+  font-size: 24rpx;
+}

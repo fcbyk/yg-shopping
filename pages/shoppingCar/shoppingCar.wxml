@@ -1,14 +1,46 @@
 <!--pages/shoppingCar/shoppingCar.wxml-->
 
-<view class="top"> +添加收货地址 </view>
+<view class="top">
+<view wx:if="{{!isAddress}}" bindtap="getAddress"> +添加收货地址 </view>
+<view class="address" wx:else>
+  <view class="address-nt clearfix">
+    <view class="address-name fL">{{addressInfo.userName}}</view>
+    <view class="address-tel fR">{{addressInfo.telNumber}}</view>
+  </view>
+  <view class="address-detail fL">{{addressInfo.detail}}</view>
+</view>
+ </view>
 
-<view class="main">
+<view class="main" wx:if="{{!isCar}}">
 <view><image src="../../image/9.jpeg" mode="widthFix"></image></view>
 <view>购物车竟然是空的</view>
 <view>再忙，也要记得买点什么犒赏自己~</view>
 <view>
 <navigator url="../cate/cate" open-type="switchTab">去逛逛</navigator>
 </view>
+</view>
+<view class="block" wx:else>
+  <view class="block-list" wx:for="{{carList}}" wx:key="gid">
+    <checkbox-group>
+      <checkbox class="aaa"></checkbox>
+    </checkbox-group>
+    <view class="block-info">
+      <view class="info-img">
+        <image src="{{item.img}}" mode="widthFix" class="i-img"></image>
+      </view>
+      <view class="info-txt">
+        <view class="info-name">{{item.name}}</view>
+        <view class="pr-number">
+          <view class="pr-price">￥{{item.price}}</view>
+          <view class="pr-num">
+            <text>-</text>
+            <text>{{item.num}}</text>
+            <text>+</text>
+          </view>
+        </view>
+      </view>
+    </view>
+  </view>
 </view>
 
 <view class="bot">

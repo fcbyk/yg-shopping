@@ -49,8 +49,9 @@
       </navigator>
       </view>
       <view class="foot-list-txt">购物车</view>
+      <view class="number-icon" wx:if="{{number}}">{{number}}</view>
     </view>
-    <view class="foot-btn shop">加入购物车</view>
+    <view class="foot-btn shop" bindtap="addShop">加入购物车</view>
     <view class="foot-btn">立即购买</view>
   </view>
 

@@ -35,6 +35,13 @@
           "query": "gid=43986",
           "launchMode": "default",
           "scene": null
+        },
+        {
+          "name": "购物车",
+          "pathName": "pages/shoppingCar/shoppingCar",
+          "query": "",
+          "launchMode": "default",
+          "scene": null
         }
       ]
     }
