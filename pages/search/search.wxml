@@ -1,0 +1,14 @@
+<!--pages/search/search.wxml-->
+<view class="search">
+  <view class="head-search">
+    <input type="text" placeholder="请输入商品名称" bindinput="inputChange" value="{{value}}"/>
+    <view class="btn" hidden="{{!isSearch}}" bindtap="clearAll">取消</view>
+  </view>
+
+  <view class="content" wx:if="{{isSearch}}">
+    <block wx:if="{{!isSearchNoData}}">
+      <view class="list" wx:for="{{searchList}}" wx:key="goods_id">{{item.goods_name}}</view>
+    </block>
+    <view wx:else>查了但是没有数据</view>
+  </view>
+</view>

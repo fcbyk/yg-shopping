@@ -5,7 +5,8 @@
     "pages/shoppingCar/shoppingCar",
     "pages/my/my",
     "pages/proList/proList",
-    "pages/detail/detail"
+    "pages/detail/detail",
+    "pages/search/search"
   ],
   "window":{
     "backgroundTextStyle":"light",

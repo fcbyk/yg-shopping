@@ -1,0 +1,48 @@
+/* pages/search/search.wxss */
+page{
+  background-color: #f0eaea;
+  height: 100%;
+}
+
+.head-search{
+  margin: 20rpx;
+  display: flex;
+  height: 60rpx;
+}
+
+input{
+  flex: 1;
+  background-color: #fff;
+  height: 60rpx;
+  font-size: 28rpx;
+  padding-left: 20rpx;
+}
+
+.btn{
+  width: 100rpx;
+  height: 60rpx;
+  background-color: #fff;
+  font-size: 28rpx;
+  text-align: center;
+  line-height: 60rpx;
+  margin-left: 20rpx;
+}
+
+.content{
+  font-size: 28rpx;
+  margin-top: 50rpx;
+}
+
+.list{
+  border: 2rpx solid #b3abab;
+  border-bottom: none;
+  margin: 0rpx 20rpx 0rpx 20rpx;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  padding: 16rpx 0 16rpx 10rpx;
+}
+
+.list:last-child{
+  border-bottom: 2rpx solid #b3abab;
+}

@@ -1,4 +1,6 @@
 <!--component/headSearch/headSearch.wxml-->
 <view class="search">
-    <view class="btn">搜索</view>
+    <navigator url="../../pages/search/search" open-type="navigate">
+      <view class="btn">搜索</view>
+    </navigator>
 </view>
