@@ -1,5 +1,3 @@
-> 微信小程序实训课，跟着老师写的的一个项目
-
 **主页**
 
 ![image](https://user-images.githubusercontent.com/101487905/193972587-614bfb74-5376-458e-a2a3-b39e76e4793d.png)
